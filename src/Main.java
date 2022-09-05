@@ -25,9 +25,8 @@ public class Main {
                 .filter(sex -> sex.getSex() == Sex.MAN)
                 .map(Person::getFamily)
                 .collect(Collectors.toList());
-        long countMilitary = militaryAvailable.size();
         System.out.println(militaryAvailable);
-        System.out.println(countMilitary);
+        System.out.println(militaryAvailable.size());
 
         List<Person> jobAvailable = persons.stream()
                 .filter(education -> education.getEducation() == Education.HIGHER)
@@ -42,9 +41,8 @@ public class Main {
                 })
                 .sorted(Comparator.comparing(Person::getFamily))
                 .collect(Collectors.toList());
-        long countJobAvailable = jobAvailable.size();
 
         System.out.println(jobAvailable);
-        System.out.println(countJobAvailable);
+        System.out.println(jobAvailable.size());
     }
 }
